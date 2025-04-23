@@ -1,0 +1,220 @@
+header {
+  background: url(background\ image.jpg);
+  height: 100vh;
+  color: #ffd700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+
+body{
+    background-color:body {
+      background-color: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+  };
+  
+
+}
+
+    .rotating-img {
+        animation: rotate 10s linear infinite;
+      }
+      
+      @keyframes rotate {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+      .glow-btn:hover {
+        box-shadow: 0 0 15px rgba(42, 119, 244, 0.7); /* Tailwind's blue-500 */
+      }
+      /* Zoom effect */
+.zoomable {
+  width: 300px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.rotating-img:hover {
+  transform: rotate(3deg) scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.rotating-img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content {
+  background-color:body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.close_btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+  .zoom {
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .zoom:hover {
+    transform: perspective(600px) scale(1.1) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  .car-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    padding: 10px;
+    text-align: center;
+  }
+  .car-gallery img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  .car-gallery img:hover {
+    transform: scale(1.05);
+  }
+  .car-column{
+    display: flex;
+    justify-content: center; /* center all cars */
+    gap: 40px; /* spacing between cars */
+    margin: 40px auto;
+    flex-wrap: wrap; /* optional: allows wrapping on smaller screens */
+  }
+  
+  .car-card {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 250px;
+  }
+  
+  .car-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .grid {
+    display: flex;
+    justify-content: center; 
+    gap: 40px; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+  }
+  .car-card {
+    width: 280px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 16px;
+    text-align: center;
+  }
+  #searchInput {
+    padding: 10px;
+    width: 60%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  #contact {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #contact input, #contact textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  #contact button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  .carousel {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .carousel .car-card {
+    display: none;
+    text-align: center;
+  }
+  
+  .carousel .car-card.active {
+    display: block;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  p strong {
+    color: #FFD700;
+    font-size: 1.1rem;
+  }
+  

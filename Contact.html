@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | AutoShield</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black to-[#1a1a1a] text-white">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-10 py-4 bg-[#121212]/80 backdrop-blur-sm fixed top-0 left-0 w-full z-10">
+    <h1 class="text-2xl font-bold text-[#D4AF37]">AutoShield</h1>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="home.html" class="hover:text-[#D4AF37] transition">Home</a></li>
+      <li><a href="Vehicles.html" class="hover:text-[#D4AF37] transition">Vehicles</a></li>
+      <li><a href="about.html" class="hover:text-[#D4AF37] transition">About</a></li>
+      <li><a href="contact.html" class="text-[#D4AF37]">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="pt-32 pb-20 px-6 md:px-20">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold text-[#D4AF37] mb-4">Get in Touch</h2>
+      <p class="text-gray-400 text-lg mb-10">We’d love to hear from you. Whether you're curious about features, warranty options, or even press — we're ready to answer any and all questions.</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+      <!-- Contact Info -->
+      <div class="bg-[#1f1f1f] p-8 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-[#D4AF37] mb-4">Contact Information</h3>
+        <p class="text-gray-300 mb-2">Phone: +91 9773445460</p>
+        <p class="text-gray-300 mb-2">Email: support@autoshield.com</p>
+        <p class="text-gray-300">Address: AutoShield HQ, Mumbai, India</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="bg-[#1f1f1f] p-8 rounded-xl shadow-lg space-y-5">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-[#2b2b2b] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-[#2b2b2b] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+        <textarea rows="4" placeholder="Your Message" class="w-full p-3 rounded bg-[#2b2b2b] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"></textarea>
+        <button class="bg-[#D4AF37] text-black px-6 py-3 rounded hover:bg-yellow-400 font-semibold transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

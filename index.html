@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoHub - Explore Vehicles</title>
+  <link href="pj.css" rel="stylesheet">
+  <script src="java.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #f1f1f1;
+      background: #0f2027;
+    }
+    
+    header {
+      background: url(bg\ img\ 1.jpg) no-repeat center center/cover;
+      height: 100vh;
+      color: #070707;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    main {
+      padding: 40px 20px;
+      background: linear-gradient(to right, #203a43, #2c5364);
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .car-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .car-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .car-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      background: #ffd700;
+      color: #000;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      background: #fff200;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      color: #222;
+      padding: 24px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 22px;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+    }
+   
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1><b>Welcome to AutoHub – Your Trusted Destination for Premium Vehicles</b></h1>
+    <p><b>Your ultimate destination to discover top-notch vehicles</b></p>
+    <nav class="flex items-center justify-between px-10 py-4 bg-[#121212]/80 backdrop-blur-sm fixed top-0 left-0 w-full z-10">
+      <h1 class="text-2xl font-bold text-[#D4AF37]"></h1>
+      <ul class="flex space-x-6 text-sm font-medium">
+        <li><a href="home.html" class="hover:text-[#D4AF37] transition">Home</a></li>
+        <li><a href="Vehicles.html" class="hover:text-[#D4AF37] transition">Vehicles</a></li>
+        <li><a href="about.html" class="hover:text-[#D4AF37] transition">About</a></li>
+        <li><a href="contact.html" class="hover:text-[#D4AF37] transition">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+
+    <h2 style="text-align: center; margin-bottom: 20px;">Popular Vehicles</h2>
+    <div class="grid">
+
+      <div class="car-card">
+        <img src="IMG C.png" alt="Mahindra Thar" class="zoom" onclick="openPopup('Mahindra Thar', '2.2L Diesel | Manual/Auto | 4x4 | Touchscreen, Convertible Roof, Cruise Control')">
+        <h3>Mahindra Thar</h3>
+        <p><strong>₹12.79 - ₹20.21 Lakh</strong></p>
+        <p>Diesel | Manual | Off-road King</p>
+        <button class="btn">View Details</button>
+      </div>
+
+      <div class="car-card">
+        <img src="IMG F.png" alt="Audi Q5" class="zoom" onclick="openPopup('Audi Q5', 'Petrol | 450 HP | AWD | 0-100 in 5.3 sec | Luxury Interior')">
+        <h3>Audi Q5</h3>
+        <p><strong>₹65.18 - ₹73.96 Lakh</strong></p>
+        <p>Petrol | Quattro Drive | 450 HP</p>
+        <button class="btn">View Details</button>
+      </div>
+
+      <div class="car-card">
+        <img src="IMG A.png" alt="BMW X5 M Sport" class="zoom" onclick="openPopup('BMW X5 M Sport', 'Hybrid | Auto | 52 MPG | Premium SUV')">
+        <h3>BMW X5 M Sport</h3>
+        <p><strong>₹1.19 - ₹1.44 Crore</strong></p>
+        <p>Hybrid | Automatic | 52 MPG</p>
+        <button class="btn">View Details</button>
+      </div>
+
+      <div class="car-card">
+        <img src="IMG G.png" alt="Range Rover" class="zoom" onclick="openPopup('Range Rover Evoque', 'Diesel | 2.0L | Terrain Response | Panoramic Sunroof')">
+        <h3>Range Rover Evoque</h3>
+        <p><strong>₹73.07 - ₹78.85 Lakh</strong></p>
+        <p>Diesel | 2.0L | Luxury SUV</p>
+        <button class="btn">View Details</button>
+      </div>
+
+      <div class="car-card">
+        <img src="IMG H.png" alt="Lamborghini Huracan" class="zoom" onclick="openPopup('Lamborghini Huracán', 'V10 | 5.2L | 0-100 in 3.2s | Supercar Performance')">
+        <h3>Lamborghini Huracán</h3>
+        <p><strong>₹3.21 - ₹4.99 Crore</strong></p>
+        <p>Petrol | V10 | Exotic Power</p>
+        <button class="btn">View Details</button>
+      </div>
+
+      <div class="car-card">
+        <img src="IMG J.png" alt="Tesla Model X" class="zoom" onclick="openPopup('Tesla Model X', 'Electric | AWD | 360-mile range | Autopilot')">
+        <h3>Tesla Model X</h3>
+        <p><strong>₹2.00 core</strong></p>
+        <p>Electric | AWD | 360 mi Range</p>
+        <button class="btn">View Details</button>
+      </div>
+
+    </div>
+    <section class="p-6">
+      <h2 class="text-xl font-semibold mb-4">Popular Vehicles</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-white rounded-lg shadow p-4">
+        <img src="IMG C.png" alt="Mahindra Thar" class=" zoom rotating-img transform transition duration-300 hover:scale-105">
+          <h3 class="text-lg font-semibold">Mahindra Thar</h3>
+
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="IMG F.png" alt="Audi q5" class="zoom rotating-img transform transition duration-300 hover:scale-105">
+          <h3 class="text-lg font-semibold">Audi Q5</h3>
+  
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="IMG A.png" alt="BMW X5 M Sport" class="zoom rotating-img transform transition duration-300 hover:scale-105">
+          <h3 class="text-lg font-semibold">BMW X5 M Sport</h3>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="img g.png" alt="Range Rover" class="zoom rotating-img transform transition duration-300 hover:scale-105">
+          <h3 class="text-lg font-semibold">Range Rover</h3>
+  
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="IMG H.png" alt= "Lamborghini Huracan" class="zoom rotating-img transform transition duration-300 hover:scale-105">
+          <h3 class="text-lg font-semibold">Lamborghini Huracan</h3>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="IMG J.png" alt="Tesla Model X" class="zoom rotating-img transform transition duration-300 hover:scale-105">
+          <h3 class="text-lg font-semibold">Tesla Model X</h3>
+        </div>
+
+
+      </div>
+
+  </main>
+
+  <div id="popupModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h3 id="popupTitle"></h3>
+      <p id="popupDetails"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 AutoHub | Designed by You</p>
+    <p>Follow us on Instagram | Facebook | Twitter</p>
+  </footer>
+
+  <script>
+    function openPopup(title, details) {
+      document.getElementById("popupTitle").innerText = title;
+      document.getElementById("popupDetails").innerText = details;
+      document.getElementById("popupModal").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popupModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("popupModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+    </script>
+  </body>
+  </html>
+  
